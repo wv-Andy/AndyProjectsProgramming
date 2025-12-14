@@ -17,7 +17,7 @@ network reconnaissance and clean, readable reporting.
 
 ## Usage
 
-##1. Basic scan
+1. Basic scan
 
 python scanner.py scanme.nmap.org
 
