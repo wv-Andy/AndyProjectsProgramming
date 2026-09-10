@@ -1,54 +1,86 @@
-# AndyProjectsProgramming 
+# AndyProjectsProgramming
 
-Self-taught student preparing for a degree in **Computer Systems Engineering** with a strong focus on **Cybersecurity**.  
-Passionate about programming, networking, and digital security.  
-Currently building hands-on projects while learning **Python, Linux, Git, and networking fundamentals**.
+[![CI](https://github.com/wv-Andy/AndyProjectsProgramming/actions/workflows/ci.yml/badge.svg)](https://github.com/wv-Andy/AndyProjectsProgramming/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Always building. Always improving.
+Learning portfolio of a self-taught student preparing for a degree in **Computer
+Systems Engineering**, focused on **cybersecurity**, networking and Python.
 
-## Cybersecurity Projects
+Every project here is built from scratch, documented, and tested. The point is
+not to reimplement `nmap`, it is to understand what `nmap` actually does.
 
-### Async Port Scanner
-Asynchronous TCP port scanner built with Python using `asyncio`, designed for fast network reconnaissance and clean reporting.
+---
 
-**Key concepts:**
-- Async I/O and concurrency control
-- TCP port states (open / closed / filtered)
-- Lightweight banner grabbing
-- CLI tool design and reporting
+## Projects
 
-📁 `Cybersecurity/async-port-scanner`
+| Project | What it does | Language | Status |
+|---|---|---|---|
+| [Async Port Scanner](Cybersecurity/async-port-scanner/) | Concurrent TCP port scanner with banner grabbing and JSON reports | Python | Working |
+| [Service Enumerator](Cybersecurity/service-enumerator/) | HTTP/HTTPS header fingerprinting over TLS or plaintext | Python | Working |
 
-## Networking
-Notes, experiments, and practical work related to networking fundamentals, protocols, and real-world behavior.
+Planned work is tracked in the [roadmap](Docs/ROADMAP.md).
 
-📁 `Networking/`
+---
 
-## Python Projects
-General Python projects focused on problem-solving, automation, and learning core programming concepts.
+## Repository layout
 
-📁 `PythonProjects/`
+```
+AndyProjectsProgramming/
+├── Cybersecurity/        Security tooling and exercises
+│   ├── async-port-scanner/
+│   └── service-enumerator/
+├── Networking/           Protocol notes and experiments
+├── PythonProjects/       General-purpose Python work
+├── Docs/                 Technical notes and the roadmap
+├── Others/               Everything that fits nowhere else
+├── tests/                Test suite for every project
+└── .github/workflows/    Continuous integration
+```
 
-## Documentation
-Technical notes and documentation created while learning programming, networking, and cybersecurity topics.
+Each top-level folder has its own README explaining what belongs in it.
 
-📁 `Docs/`
+---
 
-## Other Projects
-Miscellaneous experiments and learning projects that do not fit into a specific category.
+## Quick start
 
-📁 `Others/`
+Requires **Python 3.10 or newer**. Neither tool has runtime dependencies.
 
-## Skills & Tools
-- Python (asyncio, CLI tools)
-- Networking fundamentals (TCP/IP, ports, services)
-- Linux & Windows environments
-- Git & GitHub
-- Cybersecurity fundamentals
+```bash
+git clone https://github.com/wv-Andy/AndyProjectsProgramming.git
+cd AndyProjectsProgramming
 
-## About This Repository
-This repository serves as a **learning portfolio**, documenting my progress through practical projects and technical exploration.  
-Each project is intentionally documented to reflect **what was built, how it works, and what was learned**.
+# Scan a host you are allowed to test
+python Cybersecurity/async-port-scanner/scanner.py scanme.nmap.org --top
+
+# Fingerprint a web service
+python Cybersecurity/service-enumerator/enumerator.py example.com 443
+```
+
+## Running the tests
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest
+```
+
+The suite runs entirely offline apart from two DNS lookups, and covers the
+regression that used to make the scanner report open ports as closed.
+
+---
+
+## Skills demonstrated
+
+- **Python**: asyncio, dataclasses, argparse, sockets, `ssl`, structured error handling
+- **Networking**: TCP handshakes, port states, banner grabbing, TLS and SNI, HTTP headers
+- **Tooling**: pytest, GitHub Actions, ruff, Git
+- **Platforms**: Linux and Windows, including their encoding differences
+
+## Responsible use
+
+These tools are for education and for systems you own or have written
+permission to test. Unauthorised scanning is illegal in most jurisdictions.
 
 ## License
-MIT License
+
+Released under the [MIT License](LICENSE).

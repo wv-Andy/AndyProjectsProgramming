@@ -1,0 +1,3 @@
+# Development dependencies. Neither tool needs anything at runtime.
+pytest>=8.0
+ruff>=0.6

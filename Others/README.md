@@ -1,9 +1,19 @@
-Otros (Others)
+# Others
 
-Esta carpeta contiene archivos, proyectos o recursos que no encajan directamente en las categorías principales.  
-Se utiliza para guardar contenido adicional, pruebas, ideas o materiales variados.
+Experiments and learning projects that do not fit the other categories.
 
-Others
+## Scope
 
-This folder contains files, projects, or resources that don't directly fit into the main categories.  
-It is used to store extra content, experiments, ideas, or miscellaneous materials.
+Anything worth keeping but not worth a category of its own: throwaway
+experiments that turned out interesting, work in other languages, and
+one-off exercises.
+
+## Status
+
+Empty for now.
+
+## Conventions
+
+Same as everywhere else: one folder per project, each with a README explaining
+what it is and why it exists. If this folder collects several projects on the
+same theme, they graduate into a proper top-level folder.

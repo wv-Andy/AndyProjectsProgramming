@@ -1,9 +1,21 @@
-Proyectos en Python
+# Python Projects
 
-Esta carpeta contiene scripts y proyectos en Python.  
-Aquí encontrarás ejercicios de programación, automatizaciones y ejemplos variados para practicar y aprender.
+General-purpose Python work: automation, problem solving, and the core language
+features worth practising outside a security context.
 
-Python Projects
+## Scope
 
-This folder contains Python scripts and projects.  
-Here you will find programming exercises, automations, and various examples to practice and learn.
+- Automation and scripting
+- Data structures and algorithms
+- File, text and format handling
+- Command-line tool design
+
+## Status
+
+Empty for now. Planned work is listed in the [roadmap](../Docs/ROADMAP.md).
+
+## Conventions
+
+One folder per project, each with a README and tests in the repository-wide
+[`tests/`](../tests/) folder. Standard library first. A project that needs
+dependencies carries its own `requirements.txt`.

@@ -1,9 +1,21 @@
-Documentación (Docs)
+# Docs
 
-En esta carpeta se almacenan documentos, notas y archivos de referencia relacionados con los proyectos.  
-Incluye manuales, guías, apuntes y cualquier material de apoyo para entender y desarrollar los proyectos.
+Technical notes, references and planning for the whole repository.
 
-Documentation (Docs)
+## Contents
 
-This folder stores documents, notes, and reference files related to the projects.  
-It includes manuals, guides, notes, and any supporting material to understand and develop the projects.
+| Document | Description |
+|---|---|
+| [ROADMAP.md](ROADMAP.md) | Planned projects, ordered by difficulty, with what each one teaches |
+
+## Scope
+
+Notes that outlive a single project: protocol references, tooling cheatsheets,
+lab write-ups, and lessons learned that are worth keeping. Documentation about
+one specific project belongs in that project's own README instead.
+
+## Conventions
+
+Markdown only, one topic per file, lowercase-hyphenated filenames. Notes are
+written to be re-read months later, so each one states what problem it solves
+before it explains anything.
