@@ -15,6 +15,8 @@ opposed to how the diagrams say they behave.
 | Project | Description |
 |---|---|
 | [subnet-calculator](subnet-calculator/) | IPv4 subnetting from raw bit arithmetic, verified against `ipaddress` |
+| [dns-enum](dns-enum/) | Builds DNS packets by hand: records, zone transfers, subdomain brute force |
+| [packet-sniffer](packet-sniffer/) | Decodes Ethernet, IP, TCP, UDP and ICMP headers from raw captures |
 
 More planned work is listed in the [roadmap](../Docs/ROADMAP.md).
 

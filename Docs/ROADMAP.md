@@ -51,12 +51,11 @@ half of security, which the current tools do not cover at all.
 
 ---
 
-## Tier 2: a real step up
+## Tier 2: done
 
-Multi-day projects. Each one has a concept in it that is genuinely hard the
-first time.
+Multi-day projects, each with a concept that is genuinely hard the first time.
 
-### 5. DNS enumeration tool
+### 5. DNS enumeration tool - [built](../Networking/dns-enum/)
 Query A, AAAA, MX, NS, TXT and CNAME records. Attempt a zone transfer, then
 brute-force subdomains from a wordlist, concurrently.
 
@@ -65,7 +64,7 @@ concurrency applied to something other than TCP connects. Build the query
 packets by hand if you want the full lesson.
 **Folder:** `Networking/dns-enum`
 
-### 6. Packet sniffer
+### 6. Packet sniffer - [built](../Networking/packet-sniffer/)
 Capture live traffic with a raw socket, decode Ethernet, IP and TCP/UDP headers
 by hand, and print a readable per-packet summary with filtering.
 
@@ -74,7 +73,7 @@ header layouts, and endianness. Requires root or Administrator, which is a
 lesson in itself.
 **Folder:** `Networking/packet-sniffer`
 
-### 7. Password strength and breach auditor
+### 7. Password strength and breach auditor - [built](../Cybersecurity/password-auditor/)
 Score passwords on real entropy rather than the usual "one symbol" theatre.
 Check against the Have I Been Pwned range API using k-anonymity, so the password
 never leaves the machine.
@@ -83,7 +82,7 @@ never leaves the machine.
 an elegant piece of privacy engineering worth understanding.
 **Folder:** `Cybersecurity/password-auditor`
 
-### 8. File integrity monitor
+### 8. File integrity monitor - [built](../Cybersecurity/integrity-monitor/)
 Baseline a directory tree with hashes, then detect additions, deletions and
 modifications on later runs. Persist the baseline and report a clean diff.
 

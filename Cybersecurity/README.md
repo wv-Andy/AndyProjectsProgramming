@@ -12,6 +12,8 @@ underneath. Each project is a self-contained folder with its own README.
 | [tls-inspector](tls-inspector/) | X.509 certificate parsing written by hand on raw DER bytes |
 | [header-auditor](header-auditor/) | Grades HTTP security headers out of 100 and explains each exposure |
 | [log-analyzer](log-analyzer/) | Detects brute-force, scanning and injection attempts in logs |
+| [password-auditor](password-auditor/) | Entropy scoring plus a breach check via Have I Been Pwned k-anonymity |
+| [integrity-monitor](integrity-monitor/) | Baselines a tree by hash and detects tampering |
 
 Planned additions are listed in the [roadmap](../Docs/ROADMAP.md).
 

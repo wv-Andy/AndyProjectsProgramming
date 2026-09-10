@@ -14,6 +14,10 @@ import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Make the tests directory importable, so one test module can reuse another's
+# packet-building helpers.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 
 def load_module(name: str, relative_path: str):
     path = ROOT / relative_path
@@ -60,3 +64,35 @@ def subnetcalc():
 @pytest.fixture(scope="session")
 def log_analyzer():
     return load_module("log_analyzer", "Cybersecurity/log-analyzer/analyzer.py")
+
+
+@pytest.fixture(scope="session")
+def dnsproto():
+    return load_module("dnsproto", "Networking/dns-enum/dnsproto.py")
+
+
+@pytest.fixture(scope="session")
+def dnsenum(dnsproto):
+    # dnsenum imports dnsproto, so that module is loaded first.
+    return load_module("dnsenum", "Networking/dns-enum/dnsenum.py")
+
+
+@pytest.fixture(scope="session")
+def decode():
+    return load_module("decode", "Networking/packet-sniffer/decode.py")
+
+
+@pytest.fixture(scope="session")
+def sniffer(decode):
+    # sniffer imports decode, so that module is loaded first.
+    return load_module("sniffer", "Networking/packet-sniffer/sniffer.py")
+
+
+@pytest.fixture(scope="session")
+def pwaudit():
+    return load_module("pwaudit", "Cybersecurity/password-auditor/pwaudit.py")
+
+
+@pytest.fixture(scope="session")
+def fim():
+    return load_module("fim", "Cybersecurity/integrity-monitor/fim.py")

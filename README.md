@@ -23,12 +23,16 @@ not to reimplement `nmap`, it is to understand what `nmap` actually does.
 | [TLS Certificate Inspector](Cybersecurity/tls-inspector/) | X.509 parsing written by hand on raw DER, with expiry and weak-crypto warnings |
 | [HTTP Header Auditor](Cybersecurity/header-auditor/) | Grades security headers out of 100 and explains each exposure |
 | [Log Analyzer](Cybersecurity/log-analyzer/) | Finds brute-force, scanning and injection attempts in auth and access logs |
+| [Password Auditor](Cybersecurity/password-auditor/) | Entropy scoring plus a breach check via Have I Been Pwned k-anonymity |
+| [File Integrity Monitor](Cybersecurity/integrity-monitor/) | Baselines a tree by hash and detects tampering, the core of host-based IDS |
 
 ### Networking
 
 | Project | What it does |
 |---|---|
 | [Subnet Calculator](Networking/subnet-calculator/) | IPv4 subnetting from raw bit arithmetic, verified against `ipaddress` |
+| [DNS Enumeration Tool](Networking/dns-enum/) | Builds DNS packets by hand: records, zone transfers, subdomain brute force |
+| [Packet Sniffer](Networking/packet-sniffer/) | Decodes Ethernet, IP, TCP, UDP and ICMP headers from raw captures |
 
 Planned work is tracked in the [roadmap](Docs/ROADMAP.md).
 
