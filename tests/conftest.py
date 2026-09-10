@@ -96,3 +96,24 @@ def pwaudit():
 @pytest.fixture(scope="session")
 def fim():
     return load_module("fim", "Cybersecurity/integrity-monitor/fim.py")
+
+
+@pytest.fixture(scope="session")
+def vulndb():
+    return load_module("vulndb", "Cybersecurity/vuln-scanner/vulndb.py")
+
+
+@pytest.fixture(scope="session")
+def waf_engine():
+    return load_module("engine", "Cybersecurity/mini-waf/engine.py")
+
+
+@pytest.fixture(scope="session")
+def crypto():
+    return load_module("crypto", "Cybersecurity/secure-chat/crypto.py")
+
+
+@pytest.fixture(scope="session")
+def protocol(crypto):
+    # protocol imports crypto, so that module is loaded first.
+    return load_module("protocol", "Cybersecurity/secure-chat/protocol.py")

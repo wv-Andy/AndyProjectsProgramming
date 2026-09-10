@@ -25,6 +25,9 @@ not to reimplement `nmap`, it is to understand what `nmap` actually does.
 | [Log Analyzer](Cybersecurity/log-analyzer/) | Finds brute-force, scanning and injection attempts in auth and access logs |
 | [Password Auditor](Cybersecurity/password-auditor/) | Entropy scoring plus a breach check via Have I Been Pwned k-anonymity |
 | [File Integrity Monitor](Cybersecurity/integrity-monitor/) | Baselines a tree by hash and detects tampering, the core of host-based IDS |
+| [Vulnerability Scanner](Cybersecurity/vuln-scanner/) | Scans, identifies services and matches versions against a CVE feed |
+| [Mini WAF](Cybersecurity/mini-waf/) | Reverse proxy that scores and blocks SQLi, XSS and traversal, and rate-limits |
+| [Encrypted Chat](Cybersecurity/secure-chat/) | ChaCha20-Poly1305 and Diffie-Hellman built from the RFCs, over TCP |
 
 ### Networking
 
@@ -34,7 +37,13 @@ not to reimplement `nmap`, it is to understand what `nmap` actually does.
 | [DNS Enumeration Tool](Networking/dns-enum/) | Builds DNS packets by hand: records, zone transfers, subdomain brute force |
 | [Packet Sniffer](Networking/packet-sniffer/) | Decodes Ethernet, IP, TCP, UDP and ICMP headers from raw captures |
 
-Planned work is tracked in the [roadmap](Docs/ROADMAP.md).
+### Documentation
+
+| Collection | What it is |
+|---|---|
+| [CTF Write-ups](Docs/ctf-writeups/) | Methodology and template for documenting solved challenges |
+
+The [roadmap](Docs/ROADMAP.md) tracks what is built and what is planned.
 
 ---
 

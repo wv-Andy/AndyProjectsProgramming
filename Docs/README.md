@@ -7,6 +7,7 @@ Technical notes, references and planning for the whole repository.
 | Document | Description |
 |---|---|
 | [ROADMAP.md](ROADMAP.md) | Planned projects, ordered by difficulty, with what each one teaches |
+| [ctf-writeups/](ctf-writeups/) | Methodology and template for documenting solved CTF challenges |
 
 ## Scope
 

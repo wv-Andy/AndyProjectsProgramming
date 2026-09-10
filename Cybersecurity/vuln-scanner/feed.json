@@ -1,0 +1,82 @@
+[
+  {
+    "cve": "CVE-2021-41773",
+    "product": "apache",
+    "version_start": "2.4.49",
+    "version_end": "2.4.49",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 7.5,
+    "description": "Path traversal and file disclosure in Apache HTTP Server 2.4.49, exploited in the wild."
+  },
+  {
+    "cve": "CVE-2021-42013",
+    "product": "apache",
+    "version_start": "2.4.49",
+    "version_end": "2.4.50",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 9.8,
+    "description": "Path traversal leading to remote code execution, the incomplete fix for CVE-2021-41773."
+  },
+  {
+    "cve": "CVE-2017-15906",
+    "product": "openssh",
+    "version_start": null,
+    "version_end": "7.6",
+    "start_inclusive": true,
+    "end_inclusive": false,
+    "cvss": 5.3,
+    "description": "sftp-server in OpenSSH before 7.6 allows creating zero-length files in read-only mode."
+  },
+  {
+    "cve": "CVE-2011-2523",
+    "product": "vsftpd",
+    "version_start": "2.3.4",
+    "version_end": "2.3.4",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 9.8,
+    "description": "vsftpd 2.3.4 shipped with a backdoor opening a root shell on port 6200."
+  },
+  {
+    "cve": "CVE-2019-11043",
+    "product": "php",
+    "version_start": "7.1.0",
+    "version_end": "7.3.11",
+    "start_inclusive": true,
+    "end_inclusive": false,
+    "cvss": 8.7,
+    "description": "Buffer underflow in php-fpm with nginx allows remote code execution."
+  },
+  {
+    "cve": "CVE-2019-10149",
+    "product": "exim",
+    "version_start": "4.87",
+    "version_end": "4.91",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 9.8,
+    "description": "Improper validation of the recipient address allows remote command execution as root."
+  },
+  {
+    "cve": "CVE-2015-3306",
+    "product": "proftpd",
+    "version_start": "1.3.5",
+    "version_end": "1.3.5",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 10.0,
+    "description": "The mod_copy module allows unauthenticated remote file copy, leading to code execution."
+  },
+  {
+    "cve": "CVE-2013-4547",
+    "product": "nginx",
+    "version_start": "0.8.41",
+    "version_end": "1.5.7",
+    "start_inclusive": true,
+    "end_inclusive": true,
+    "cvss": 7.5,
+    "description": "Crafted URI with a space allows security restrictions to be bypassed."
+  }
+]

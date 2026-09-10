@@ -92,11 +92,11 @@ core idea behind host-based intrusion detection.
 
 ---
 
-## Tier 3: portfolio centrepieces
+## Tier 3: done
 
-Projects that take real time and are worth pinning on a GitHub profile.
+The portfolio centrepieces. All four are built.
 
-### 9. Vulnerability scanner
+### 9. Vulnerability scanner - [built](../Cybersecurity/vuln-scanner/)
 Combine the port scanner and the service enumerator into one pipeline: discover
 hosts, identify services and versions, match them against a local CVE feed, and
 produce a prioritised report.
@@ -106,7 +106,7 @@ report design. This is the project that makes the earlier ones look like
 components of something bigger.
 **Folder:** `Cybersecurity/vuln-scanner`
 
-### 10. Mini web application firewall
+### 10. Mini web application firewall - [built](../Cybersecurity/mini-waf/)
 A reverse proxy that inspects requests, blocks SQL injection and XSS attempts by
 pattern, rate-limits per client, and logs decisions.
 
@@ -114,7 +114,7 @@ pattern, rate-limits per client, and logs decisions.
 pattern matching is a losing game against a determined attacker.
 **Folder:** `Cybersecurity/mini-waf`
 
-### 11. Encrypted chat over sockets
+### 11. Encrypted chat over sockets - [built](../Cybersecurity/secure-chat/)
 A client and server exchanging keys with Diffie-Hellman and encrypting messages
 with AES-GCM. Multiple clients, graceful disconnects, and no plaintext on the wire.
 
@@ -123,7 +123,7 @@ encryption, and socket concurrency. Prove it with a capture showing only
 ciphertext.
 **Folder:** `Cybersecurity/secure-chat`
 
-### 12. CTF write-up collection
+### 12. CTF write-up collection - [structure built](ctf-writeups/)
 Solve challenges on TryHackMe, HackTheBox or PicoCTF and document each one:
 the reconnaissance, the failed attempts, the working exploit, and the fix.
 
