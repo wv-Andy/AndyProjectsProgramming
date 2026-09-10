@@ -38,9 +38,21 @@ def test_parse_port_spec_rejects_out_of_range(scanner):
         scanner.parse_port_spec("0")
 
 
+def find_unassigned_port(scanner) -> int:
+    """Find a port the platform services database does not name.
+
+    Which ports are listed differs between Windows and Linux, so this searches
+    instead of hardcoding one.
+    """
+    for port in range(1000, 1024):
+        if scanner.lookup_service(port) is None:
+            return port
+    pytest.skip("No unassigned low port available on this platform")
+
+
 def test_lookup_service_never_raises_on_unassigned_port(scanner):
     """The unguarded version of this call is what mislabelled open ports."""
-    assert scanner.lookup_service(1000) is None
+    assert scanner.lookup_service(find_unassigned_port(scanner)) is None
     assert scanner.lookup_service(80) == "http"
 
 
@@ -113,13 +125,22 @@ def listening_port():
     server.close()
 
 
-def test_open_port_without_a_service_name_is_reported_open(scanner, listening_port):
+def test_open_port_without_a_service_name_is_reported_open(
+    scanner, listening_port, monkeypatch
+):
     """Regression test: an open port used to be reported as CLOSED.
 
     ``socket.getservbyport`` raises for unassigned ports. That OSError escaped
     the banner grab and was caught by the connect handler, which reported the
-    port closed even though the connection had succeeded.
+    port closed even though the connection had succeeded. The lookup is forced
+    to raise here so the regression is reproduced on every platform, whatever
+    the local services database happens to list.
     """
+
+    def always_raises(*_args, **_kwargs):
+        raise OSError("port/proto not found")
+
+    monkeypatch.setattr(socket, "getservbyport", always_raises)
 
     async def run():
         semaphore = asyncio.Semaphore(4)
