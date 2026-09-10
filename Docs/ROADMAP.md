@@ -135,25 +135,31 @@ into evidence someone else can evaluate. Failed attempts are the valuable part.
 
 ## Python fundamentals
 
-Worth having in `PythonProjects/` to show range beyond security tooling.
+All built, to show range beyond security tooling.
 
-| Project | Teaches |
-|---|---|
-| File organiser by type and date | `pathlib`, safe file operations, dry-run design |
-| Markdown to HTML converter | Parsing, state machines, recursion |
-| CLI task manager with JSON storage | Persistence, CRUD, argparse subcommands |
-| Concurrent web scraper | `asyncio` reused outside networking, rate limiting, politeness |
-| Simple key-value database | File formats, indexing, durability, what a database really does |
+| Project | Teaches | |
+|---|---|---|
+| File organiser by type and date | `pathlib`, safe file operations, dry-run design | [built](../PythonProjects/file-organizer/) |
+| Markdown to HTML converter | Parsing, state machines, escaping | [built](../PythonProjects/markdown-converter/) |
+| CLI task manager with JSON storage | Persistence, CRUD, atomic writes, argparse subcommands | [built](../PythonProjects/task-manager/) |
+| Concurrent web scraper | `asyncio` reused outside networking, rate limiting, politeness | [built](../PythonProjects/web-scraper/) |
+| Simple key-value database | Log-structured storage, indexing, durability | [built](../PythonProjects/kv-database/) |
 
 ---
 
+## Status
+
+Every project on this roadmap is built, documented and tested. What remains is
+upkeep and polish, not new construction.
+
 ## Repository upkeep
 
-- [ ] Pin the top three projects on the GitHub profile once tier 1 is done
+- [ ] Pin the vulnerability scanner, the TLS inspector and the encrypted chat on the GitHub profile
 - [ ] Add topics on GitHub: `python`, `cybersecurity`, `networking`, `asyncio`, `security-tools`
 - [ ] Set the repository description and social preview image
-- [ ] Keep every new project covered by tests, since CI runs on each push
-- [ ] Record what was learned in each README while it is still fresh
+- [x] Keep every new project covered by tests, since CI runs on each push
+- [x] Record what was learned in each README while it is still fresh
+- [ ] Fill in `Docs/ctf-writeups/` as challenges are solved
 
 ## Choosing what to build
 

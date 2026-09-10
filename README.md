@@ -37,6 +37,16 @@ not to reimplement `nmap`, it is to understand what `nmap` actually does.
 | [DNS Enumeration Tool](Networking/dns-enum/) | Builds DNS packets by hand: records, zone transfers, subdomain brute force |
 | [Packet Sniffer](Networking/packet-sniffer/) | Decodes Ethernet, IP, TCP, UDP and ICMP headers from raw captures |
 
+### Python fundamentals
+
+| Project | What it does |
+|---|---|
+| [File Organizer](PythonProjects/file-organizer/) | Sorts a directory by type or date, with a safe dry run |
+| [Markdown Converter](PythonProjects/markdown-converter/) | Markdown to HTML as a line-oriented state machine |
+| [Task Manager](PythonProjects/task-manager/) | CLI task manager with atomic JSON storage |
+| [Web Scraper](PythonProjects/web-scraper/) | Concurrent, polite crawler that obeys robots.txt |
+| [Key-Value Database](PythonProjects/kv-database/) | Append-only store, the design behind Bitcask |
+
 ### Documentation
 
 | Collection | What it is |

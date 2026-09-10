@@ -117,3 +117,28 @@ def crypto():
 def protocol(crypto):
     # protocol imports crypto, so that module is loaded first.
     return load_module("protocol", "Cybersecurity/secure-chat/protocol.py")
+
+
+@pytest.fixture(scope="session")
+def file_organizer():
+    return load_module("organize", "PythonProjects/file-organizer/organize.py")
+
+
+@pytest.fixture(scope="session")
+def md2html():
+    return load_module("md2html", "PythonProjects/markdown-converter/md2html.py")
+
+
+@pytest.fixture(scope="session")
+def task_manager():
+    return load_module("tasks", "PythonProjects/task-manager/tasks.py")
+
+
+@pytest.fixture(scope="session")
+def web_scraper():
+    return load_module("scraper", "PythonProjects/web-scraper/scraper.py")
+
+
+@pytest.fixture(scope="session")
+def kvstore():
+    return load_module("kvstore", "PythonProjects/kv-database/kvstore.py")
