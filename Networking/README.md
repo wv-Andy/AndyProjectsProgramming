@@ -10,10 +10,13 @@ opposed to how the diagrams say they behave.
 - Routing, subnetting and address planning
 - Lab setups and the results of breaking them on purpose
 
-## Status
+## Projects
 
-Empty for now. Planned work is listed in the [roadmap](../Docs/ROADMAP.md);
-the networking entries there are the intended first additions.
+| Project | Description |
+|---|---|
+| [subnet-calculator](subnet-calculator/) | IPv4 subnetting from raw bit arithmetic, verified against `ipaddress` |
+
+More planned work is listed in the [roadmap](../Docs/ROADMAP.md).
 
 ## Conventions
 

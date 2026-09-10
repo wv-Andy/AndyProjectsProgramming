@@ -9,6 +9,9 @@ underneath. Each project is a self-contained folder with its own README.
 |---|---|
 | [async-port-scanner](async-port-scanner/) | Concurrent TCP port scanner with banner grabbing and JSON reports |
 | [service-enumerator](service-enumerator/) | HTTP/HTTPS header fingerprinting over TLS or plaintext |
+| [tls-inspector](tls-inspector/) | X.509 certificate parsing written by hand on raw DER bytes |
+| [header-auditor](header-auditor/) | Grades HTTP security headers out of 100 and explains each exposure |
+| [log-analyzer](log-analyzer/) | Detects brute-force, scanning and injection attempts in logs |
 
 Planned additions are listed in the [roadmap](../Docs/ROADMAP.md).
 

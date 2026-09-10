@@ -9,12 +9,12 @@ subdomain finder that builds DNS queries teaches DNS.
 
 ---
 
-## Tier 1: build next
+## Tier 1: done
 
-Small enough to finish in a sitting or two, and each one closes a gap the two
-existing tools left open.
+All four are built, documented and tested. Each one closed a gap the first two
+tools left open.
 
-### 1. TLS certificate inspector
+### 1. TLS certificate inspector — [built](../Cybersecurity/tls-inspector/)
 Connect to a host, pull the certificate chain, and report issuer, subject,
 alternative names, key algorithm and expiry. Flag anything expiring within 30
 days, self-signed, or using a weak signature.
@@ -24,7 +24,7 @@ days, self-signed, or using a weak signature.
 currently ignores the certificate it validates.
 **Folder:** `Cybersecurity/tls-inspector`
 
-### 2. HTTP security header auditor
+### 2. HTTP security header auditor — [built](../Cybersecurity/header-auditor/)
 Fetch a site and grade its security headers: HSTS, Content-Security-Policy,
 X-Frame-Options, X-Content-Type-Options, Referrer-Policy. Explain what each
 missing header exposes and output a letter grade.
@@ -33,7 +33,7 @@ missing header exposes and output a letter grade.
 a judgement. Reuses the enumerator's header parsing.
 **Folder:** `Cybersecurity/header-auditor`
 
-### 3. Subnet calculator
+### 3. Subnet calculator — [built](../Networking/subnet-calculator/)
 Take `192.168.1.0/24` and report network address, broadcast, usable range, host
 count and mask in both notations. Add subnet splitting and a supernet mode.
 
@@ -41,7 +41,7 @@ count and mask in both notations. Add subnet splitting and a supernet mode.
 every routing decision. Write it without `ipaddress` first, then compare.
 **Folder:** `Networking/subnet-calculator`
 
-### 4. Log parser and anomaly reporter
+### 4. Log parser and anomaly reporter — [built](../Cybersecurity/log-analyzer/)
 Parse auth logs or web access logs. Count failed logins per IP, flag brute-force
 patterns, spot scanning behaviour in 404 bursts, and summarise the top offenders.
 

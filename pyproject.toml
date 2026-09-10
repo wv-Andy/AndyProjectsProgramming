@@ -1,6 +1,9 @@
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "network: needs internet access, and skips when the target is unreachable",
+]
 
 [tool.ruff]
 line-length = 100

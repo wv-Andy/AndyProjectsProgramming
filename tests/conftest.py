@@ -34,3 +34,29 @@ def scanner():
 @pytest.fixture(scope="session")
 def enumerator():
     return load_module("enumerator", "Cybersecurity/service-enumerator/enumerator.py")
+
+
+@pytest.fixture(scope="session")
+def x509():
+    return load_module("x509", "Cybersecurity/tls-inspector/x509.py")
+
+
+@pytest.fixture(scope="session")
+def tls_inspector(x509):
+    # inspector imports x509, so that module is loaded first.
+    return load_module("inspector", "Cybersecurity/tls-inspector/inspector.py")
+
+
+@pytest.fixture(scope="session")
+def header_auditor():
+    return load_module("header_auditor", "Cybersecurity/header-auditor/auditor.py")
+
+
+@pytest.fixture(scope="session")
+def subnetcalc():
+    return load_module("subnetcalc", "Networking/subnet-calculator/subnetcalc.py")
+
+
+@pytest.fixture(scope="session")
+def log_analyzer():
+    return load_module("log_analyzer", "Cybersecurity/log-analyzer/analyzer.py")

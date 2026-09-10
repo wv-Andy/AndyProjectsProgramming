@@ -14,10 +14,21 @@ not to reimplement `nmap`, it is to understand what `nmap` actually does.
 
 ## Projects
 
-| Project | What it does | Language | Status |
-|---|---|---|---|
-| [Async Port Scanner](Cybersecurity/async-port-scanner/) | Concurrent TCP port scanner with banner grabbing and JSON reports | Python | Working |
-| [Service Enumerator](Cybersecurity/service-enumerator/) | HTTP/HTTPS header fingerprinting over TLS or plaintext | Python | Working |
+### Cybersecurity
+
+| Project | What it does |
+|---|---|
+| [Async Port Scanner](Cybersecurity/async-port-scanner/) | Concurrent TCP port scanner with banner grabbing and JSON reports |
+| [Service Enumerator](Cybersecurity/service-enumerator/) | HTTP/HTTPS header fingerprinting over TLS or plaintext |
+| [TLS Certificate Inspector](Cybersecurity/tls-inspector/) | X.509 parsing written by hand on raw DER, with expiry and weak-crypto warnings |
+| [HTTP Header Auditor](Cybersecurity/header-auditor/) | Grades security headers out of 100 and explains each exposure |
+| [Log Analyzer](Cybersecurity/log-analyzer/) | Finds brute-force, scanning and injection attempts in auth and access logs |
+
+### Networking
+
+| Project | What it does |
+|---|---|
+| [Subnet Calculator](Networking/subnet-calculator/) | IPv4 subnetting from raw bit arithmetic, verified against `ipaddress` |
 
 Planned work is tracked in the [roadmap](Docs/ROADMAP.md).
 
